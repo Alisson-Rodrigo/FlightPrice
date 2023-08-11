@@ -14,7 +14,7 @@ for c in range(1):
         origem = navegador.find_element('xpath','//*[@id="i21"]/div[1]/div/div/div[1]/div/div/input')
         actions.click(origem)
         actions.send_keys_to_element(origem, "\b")
-        actions.send_keys('Rio de Janeiro')
+        actions.send_keys('São Paulo')
         actions.send_keys(Keys.ENTER)
         actions.perform()
         sleep(3)
@@ -49,17 +49,30 @@ for c in range(1):
         wait = WebDriverWait(navegador, 10)
         preco_element = wait.until(EC.visibility_of_element_located(('xpath', '//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span')))
 
-        preços = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span')
-        texto = preços.text
-        print(texto)
+        preço = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span')
+        preço = preço.text
+        print(preço)
 
-<<<<<<< Updated upstream
-        preço2 = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span')
-        texto2 = preço2.text
-        print(texto2)
-=======
-        
->>>>>>> Stashed changes
+        horario_chegada = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span')
+        horario_chegada = horario_chegada.text
+        print(horario_chegada)
+
+        companhia = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[2]/span')
+        companhia = companhia.text
+        print(companhia) 
+
+        paradas = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[4]/div[1]/span')
+        paradas = paradas.text
+        print(paradas)
+
+        embarque = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[1]/span/span/span')
+        embarque = embarque.text
+        print(embarque)
+
+        desembarque = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span')
+        desembarque = desembarque.text
+        print(desembarque)
+
         sleep(1000)
 
     except:
