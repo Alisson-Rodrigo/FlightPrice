@@ -53,9 +53,13 @@ for c in range(1):
         texto = preços.text
         print(texto)
 
+<<<<<<< Updated upstream
         preço2 = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span')
         texto2 = preço2.text
         print(texto2)
+=======
+        
+>>>>>>> Stashed changes
         sleep(1000)
 
     except:
