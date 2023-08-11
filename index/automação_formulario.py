@@ -14,7 +14,7 @@ for c in range(1):
         origem = navegador.find_element('xpath','//*[@id="i21"]/div[1]/div/div/div[1]/div/div/input')
         actions.click(origem)
         actions.send_keys_to_element(origem, "\b")
-        actions.send_keys('São Paulo')
+        actions.send_keys('Brasilia')
         actions.send_keys(Keys.ENTER)
         actions.perform()
         sleep(3)
@@ -53,15 +53,17 @@ for c in range(1):
         preço = preço.text
         print(preço)
 
+        horario_chegada = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span')
+        horario_chegada = horario_chegada.text
+        print(horario_chegada)
+
         companhia = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[2]/span')
         companhia = companhia.text
-        print(companhia)
+        print(companhia) 
 
-        horario = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span')
-        horario = horario.text
-        print(horario)
-
-
+        paradas = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[4]/div[1]/span')
+        paradas = paradas.text
+        print(paradas)
 
         sleep(1000)
 
