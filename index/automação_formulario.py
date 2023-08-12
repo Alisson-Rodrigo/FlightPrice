@@ -3,44 +3,44 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import csv
 
 from time import sleep
 
-for c in range(1):
+
+while True:
     try:
         navegador = webdriver.Chrome()
         actions = ActionChains(navegador)
         navegador.get("https://www.google.com/travel/flights?sca_esv=555979541&output=search&q=passagens+aereas&source=lnms&mode_promoted=true&impression_in_search=true&sa=X&sqi=2&ved=2ahUKEwjtxKnJm9WAAxXfLrkGHXdLBN4Q0pQJegQICRAB")
-        options = webdriver.ChromeOptions()
-        options.add_argument('--disable-gpu-shader-disk-cache')
         origem = navegador.find_element('xpath','//*[@id="i21"]/div[1]/div/div/div[1]/div/div/input')
         actions.click(origem)
         actions.send_keys_to_element(origem, "\b")
         actions.send_keys('São Paulo')
         actions.send_keys(Keys.ENTER)
         actions.perform()
-        sleep(3)
+        sleep(6)
          
         destino = navegador.find_element('xpath','//*[@id="i21"]/div[4]/div/div/div[1]/div/div/input')
         actions.click(destino)
-        actions.send_keys('Teresina')
+        actions.send_keys('Rio de Janeiro')
         actions.send_keys(Keys.ENTER)
         actions.perform()
-        sleep(3)
+        sleep(6)
         
         ida = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[1]/div[1]/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[1]/div/div[1]/div/input')
         actions.click(ida)
         actions.send_keys('01/01/2024')
         actions.send_keys(Keys.ENTER)
         actions.perform()
-        sleep(3)
+        sleep(6)
 
         volta = navegador.find_element('xpath','//*[@id="ow81"]/div[2]/div/div[2]/div[1]/div[1]/div[2]/div/input')
         actions.click(volta)
         actions.send_keys('01/02/2024')
         actions.send_keys(Keys.ENTER)
         actions.perform()
-        sleep(3)
+        sleep(6)
 
         confirmar_data = navegador.find_element('xpath','//*[@id="ow81"]/div[2]/div/div[3]/div[3]/div/button')
         confirmar_data.click()
@@ -48,35 +48,63 @@ for c in range(1):
         confirmar = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[1]/div[1]/div[2]/div/button')
         confirmar.click()
 
-        wait = WebDriverWait(navegador, 10)
-        preco_element = wait.until(EC.visibility_of_element_located(('xpath', '//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span')))
+        lista_preços = ['//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span']
 
-        preço = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[6]/div[1]/div[2]/span')
-        preço = preço.text
-        print(preço)
+        lista_companhias = ['//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[2]/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[2]/div[2]/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[3]/div/div[2]/div/div[2]/div[2]/div[2]/span[1]']
 
-        horario_chegada = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span')
-        horario_chegada = horario_chegada.text
-        print(horario_chegada)
+        lista_paradas = ['//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[4]/div[1]/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[4]/div[1]/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[3]/div/div[2]/div/div[2]/div[4]/div[1]/span']
 
-        companhia = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[2]/span')
-        companhia = companhia.text
-        print(companhia) 
+        lista_horarios_partida = ['//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[1]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[1]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[3]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[1]/span/span/span']
 
-        paradas = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[4]/div[1]/span')
-        paradas = paradas.text
-        print(paradas)
+        lista_horarios_chegada = ['//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[3]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span']
 
-        embarque = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[1]/span/span/span')
-        embarque = embarque.text
-        print(embarque)
+        dados = []
+        count = 0
+        for c in range(3):
+            wait = WebDriverWait(navegador, 10)
+            preco_element = wait.until(EC.visibility_of_element_located(('xpath', f'{lista_preços[count]}')))
+            preço = navegador.find_element('xpath',f'{lista_preços[count]}')
+            preço = preço.text
+            print(preço)
 
-        desembarque = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span')
-        desembarque = desembarque.text
-        print(desembarque)
+            companhia = navegador.find_element('xpath',f'{lista_companhias[count]}')
+            companhia = companhia.text
+            print(companhia) 
 
+            paradas = navegador.find_element('xpath',f'{lista_paradas[count]}')
+            paradas = paradas.text
+            print(paradas)
+
+            horario_partida = navegador.find_element('xpath',f'{lista_horarios_partida[count]}')
+            horario_partida = horario_partida.text
+            print(horario_partida)
+
+            horario_chegada = navegador.find_element('xpath',f'{lista_horarios_chegada[count]}')
+            horario_chegada = horario_chegada.text
+            print(horario_chegada)
+            print('-------------------')
+            print('')
+            count += 1
+            dados.append([preço, companhia, paradas, horario_partida, horario_chegada])
+            
+        dicionario_voos = {}
+        for i,j in enumerate(dados,start=1):
+            print(f'{i} - {j}')    
+
+        for idx, info_voo in enumerate(dados, start=1):
+            chave = f'voo{idx}'
+            dicionario_voos[chave] = info_voo
+
+
+        for chave, info_voo in dicionario_voos.items():
+            print(f'Chave: {chave}')
+            print(f'Informações do voo: {info_voo}')
+            print('-------------------')
+
+        print(dicionario_voos['voo1'][0])
+        
         sleep(1000)
-
     except:
         sleep(100)
         continue
+ 
