@@ -101,8 +101,8 @@ class FlightPrice:
                 print('-------------------')
                 print('')
                 count += 1
-
                 self.dados.append([preço, companhia, paradas, horario_partida, horario_chegada])
+
             for idx, info_voo in enumerate(self.dados, start=1):
                 chave = f'voo{idx}'
                 self.dicionario_voos[chave] = info_voo
@@ -116,7 +116,7 @@ class FlightPrice:
             navegador.quit()
 
 if __name__ == "__main__":
-    scraper = FlightPrice('São paulo','Rio de janeiro','01/01/2024','01/01/2024')
+    scraper = FlightPrice('Rio de Janeiro','São Paulo','01/01/2024','01/01/2024')
     var = scraper.buscar_voos()
     print(var)
 
