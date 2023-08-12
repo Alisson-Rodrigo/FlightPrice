@@ -75,49 +75,39 @@ class FlightPrice:
 
 
             count = 0
-
+        
             for c in range(5):
                 wait = WebDriverWait(navegador, 10)
                 preco_element = wait.until(EC.visibility_of_element_located(('xpath', f'{self.lista_preços[count]}')))
                 preço = navegador.find_element('xpath',f'{self.lista_preços[count]}')
                 preço = preço.text
-                print(preço)
 
                 companhia = navegador.find_element('xpath',f'{self.lista_companhias[count]}')
                 companhia = companhia.text
-                print(companhia) 
 
                 paradas = navegador.find_element('xpath',f'{self.lista_paradas[count]}')
                 paradas = paradas.text
-                print(paradas)
 
                 horario_partida = navegador.find_element('xpath',f'{self.lista_horarios_partida[count]}')
                 horario_partida = horario_partida.text
-                print(horario_partida)
 
                 horario_chegada = navegador.find_element('xpath',f'{self.lista_horarios_chegada[count]}')
                 horario_chegada = horario_chegada.text
-                print(horario_chegada)
-                print('-------------------')
-                print('')
-                count += 1
-                self.dados.append([preço, companhia, paradas, horario_partida, horario_chegada])
 
-            for idx, info_voo in enumerate(self.dados, start=1):
-                chave = f'voo{idx}'
-                self.dicionario_voos[chave] = info_voo
+                count += 1
+
+                self.dados.append([preço, companhia, paradas, horario_partida, horario_chegada])
+                for idx, info_voo in enumerate(self.dados, start=1):
+                    chave = f'voo{idx}'
+                    self.dicionario_voos[chave] = info_voo
             
-            for c,k in self.dicionario_voos.items():
-                print(c, k)
-                print('')  
+            return self.dicionario_voos
             
         except:
             print('Erro ao carregar a página, tentando novamente...')
             navegador.quit()
 
 if __name__ == "__main__":
-    scraper = FlightPrice('Rio de Janeiro','São Paulo','01/01/2024','01/01/2024')
+    scraper = FlightPrice('São paulo','Rio de janeiro','01/01/2024','01/01/2024')
     var = scraper.buscar_voos()
     print(var)
-
-            
