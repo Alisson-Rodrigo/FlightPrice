@@ -86,11 +86,9 @@ while True:
             print('')
             count += 1
             dados.append([preço, companhia, paradas, horario_partida, horario_chegada])
-            
-        dicionario_voos = {}
-        for i,j in enumerate(dados,start=1):
-            print(f'{i} - {j}')    
 
+        dicionario_voos = {}  
+        
         for idx, info_voo in enumerate(dados, start=1):
             chave = f'voo{idx}'
             dicionario_voos[chave] = info_voo
@@ -101,7 +99,6 @@ while True:
             print(f'Informações do voo: {info_voo}')
             print('-------------------')
 
-        print(dicionario_voos['voo1'][0])
         
         sleep(1000)
     except:
