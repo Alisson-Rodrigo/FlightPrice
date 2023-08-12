@@ -72,10 +72,16 @@ class FlightPrice:
 
             confirmar = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[1]/div[1]/div[2]/div/button')
             confirmar.click()
+            sleep(3)
+
+            ordernar_preços = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[4]/div/div/div/div[1]/div/button')
+            actions.click(ordernar_preços)
+            actions.perform()
+            sleep(1000)
 
 
             count = 0
-        
+            '''
             for c in range(3):
                 wait = WebDriverWait(navegador, 10)
                 preco_element = wait.until(EC.visibility_of_element_located(('xpath', f'{self.lista_preços[count]}')))
@@ -107,6 +113,7 @@ class FlightPrice:
             for c,k in self.dicionario_voos.items():
                 print(c,k)
             return self.dicionario_voos
+            '''
                     
         except:
             print('Erro ao carregar a página, tentando novamente...')
