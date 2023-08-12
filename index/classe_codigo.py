@@ -72,20 +72,15 @@ class FlightPrice:
 
             confirmar = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[1]/div[1]/div[2]/div/button')
             confirmar.click()
-            sleep(3000)
-
-            
-            ordernar_preços = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[4]/div/div/div/div[1]/div/button')
-            actions.click(ordernar_preços)
-            actions.perform()
-            
-
+            sleep(2)
 
             count = 0
             for c in range(5):
+                sleep(1000)
                 wait = WebDriverWait(navegador, 10)
-                preco_element = wait.until(EC.visibility_of_element_located(('xpath', f'{self.lista_preços[count]}')))
-                preço = navegador.find_element('xpath',f'{self.lista_preços[count]}')
+                wait.until(EC.visibility_of_element_located(('xpath', f'{self.lista_preços[count]}')))
+
+                preço = navegador.find_element('xpath',f'{self.lista_preços[count]}') 
                 preço = preço.text
 
                 companhia = navegador.find_element('xpath',f'{self.lista_companhias[count]}')
