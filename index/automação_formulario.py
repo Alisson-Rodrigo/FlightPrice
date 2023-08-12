@@ -57,6 +57,8 @@ while True:
         lista_horarios_chegada = ['//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[3]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[4]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[5]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span']
 
         count = 0
+        dados = []
+
         for c in range(5):
             wait = WebDriverWait(navegador, 10)
             preco_element = wait.until(EC.visibility_of_element_located(('xpath', f'{lista_preços[count]}')))
@@ -82,9 +84,20 @@ while True:
             print('-------------------')
             print('')
             count += 1
+
+            dados.append([preço, companhia, paradas, horario_partida, horario_chegada])
+            dicionario_voos = {}  
             
+        for idx, info_voo in enumerate(dados, start=1):
+            chave = f'voo{idx}'
+            dicionario_voos[chave] = info_voo
+        
+        for c,k in dicionario_voos.items():
+            print(c, k)
+            print('')    
         navegador.quit()
         break
     except:
         print('Erro ao carregar a página, tentando novamente...')
+        navegador.quit()
         continue
