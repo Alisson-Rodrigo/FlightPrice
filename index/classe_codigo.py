@@ -76,9 +76,13 @@ class FlightPrice:
 
             count = 0
             for c in range(5):
-                sleep(1000)
                 wait = WebDriverWait(navegador, 10)
                 wait.until(EC.visibility_of_element_located(('xpath', f'{self.lista_preços[count]}')))
+                
+                ordenar_preços = navegador.find_element('xpath','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/div/div/div/div[1]/div/button')
+                ordenar_preços.click()
+
+
 
                 preço = navegador.find_element('xpath',f'{self.lista_preços[count]}') 
                 preço = preço.text
