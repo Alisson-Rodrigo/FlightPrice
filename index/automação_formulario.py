@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
 
 while True:
     try:
@@ -86,7 +87,8 @@ while True:
             count += 1
 
             dados.append([preço, companhia, paradas, horario_partida, horario_chegada])
-            dicionario_voos = {}  
+            dicionario_voos = {}
+            sleep(1000)
             
         for idx, info_voo in enumerate(dados, start=1):
             chave = f'voo{idx}'
