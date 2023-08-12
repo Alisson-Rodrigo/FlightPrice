@@ -104,9 +104,9 @@ class FlightPrice:
                 chave = f'voo{count + 1}'  
                 self.dicionario_voos[chave] = info_voo 
                 count += 1
-            for c,k in self.dicionario_voos.items():
-                print(c,k)
-            return self.dicionario_voos
+                for c,k in self.dicionario_voos.items():
+                    print(c,k)
+                return self.dicionario_voos
                     
         except:
             print('Erro ao carregar a página, tentando novamente...')
