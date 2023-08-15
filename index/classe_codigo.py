@@ -112,8 +112,8 @@ class FlightPrice:
                 chave = f'voo{count + 1}'  
                 self.dicionario_voos[chave] = info_voo 
                 count += 1
-            return self.dicionario_voos
-                    
+            return self.dicionario_voos  
         except:
-            return 'Erro ao carregar a página, tentando novamente...'
+            print('Erro ao carregar a página, tentando novamente...')
+            navegador.quit()
 
