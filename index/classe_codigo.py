@@ -75,7 +75,7 @@ class FlightPrice:
             sleep(2)
 
             count = 0
-            for c in range(5):
+            while navegador.find_elements('xpath',f'{self.lista_preços[count]}') != []:
                 wait = WebDriverWait(navegador, 10)
                 wait.until(EC.visibility_of_element_located(('xpath', f'{self.lista_preços[count]}')))
             
