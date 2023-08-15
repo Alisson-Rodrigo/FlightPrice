@@ -3,6 +3,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+
 from time import sleep
 
 class FlightPrice:
@@ -28,7 +30,14 @@ class FlightPrice:
 
     def buscar_voos(self):
         try:
-            navegador = webdriver.Chrome()
+
+
+            chrome_options = Options()
+            chrome_options.add_argument('--headless')   
+            chrome_options.add_argument('--disable-gpu')  
+            chrome_options.add_argument('--window-size=1920x1080')  
+
+            navegador = webdriver.Chrome(options=chrome_options)
             actions = ActionChains(navegador)
             navegador.get("https://www.google.com/travel/flights?sca_esv=555979541&output=search&q=passagens+aereas&source=lnms&mode_promoted=true&impression_in_search=true&sa=X&sqi=2&ved=2ahUKEwjtxKnJm9WAAxXfLrkGHXdLBN4Q0pQJegQICRAB")
 
