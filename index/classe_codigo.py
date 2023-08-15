@@ -30,8 +30,6 @@ class FlightPrice:
 
     def buscar_voos(self):
         try:
-
-
             chrome_options = Options()
             chrome_options.add_argument('--headless')   
             chrome_options.add_argument('--disable-gpu')  
@@ -114,15 +112,8 @@ class FlightPrice:
                 chave = f'voo{count + 1}'  
                 self.dicionario_voos[chave] = info_voo 
                 count += 1
-            for c,k in self.dicionario_voos.items():
-                print(c,k)
             return self.dicionario_voos
                     
         except:
-            print('Erro ao carregar a página, tentando novamente...')
-            navegador.quit()
+            return 'Erro ao carregar a página, tentando novamente...'
 
-if __name__ == "__main__":
-    scraper = FlightPrice('Rio de janeiro','São paulo','01/01/2024','01/01/2024')
-    var = scraper.buscar_voos()
-    print(var)
