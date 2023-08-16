@@ -4,6 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+import re
 
 from time import sleep
 
@@ -110,8 +111,8 @@ class FlightPrice:
                     'preço': preço,
                     'companhia': companhia,
                     'paradas': paradas,
-                    'horario_partida': horario_partida,
-                    'horario_chegada': horario_chegada
+                    'horario_partida': horario_partida_aux,
+                    'horario_chegada': horario_chegada_aux
                 }
                 chave = f'voo{count + 1}'  
                 self.dicionario_voos[chave] = info_voo 
