@@ -123,5 +123,5 @@ class FlightPrice:
             navegador.quit()
        
 if __name__ == "__main__":
-    scraper = FlightPrice('Rio de janeiro','São paulo','01/01/2024','01/01/2024')
+    scraper = FlightPrice('Rio de janeiro','São paulo','01/01/2024','01/02/2024')
     var = scraper.buscar_voos()
