@@ -125,5 +125,3 @@ class FlightPrice:
 if __name__ == "__main__":
     scraper = FlightPrice('Rio de janeiro','São paulo','01/01/2024','01/01/2024')
     var = scraper.buscar_voos()
-    for c,k in var.items():
-        print(var[c])
