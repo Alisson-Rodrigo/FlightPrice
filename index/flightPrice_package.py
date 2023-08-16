@@ -8,7 +8,7 @@ import re
 
 from time import sleep
 
-class FlightPrice:
+class Scraping_voos:
         
     def __init__(self,origem,destino,ida,volta):
         self.origem_campo = origem
@@ -118,8 +118,12 @@ class FlightPrice:
                 self.dicionario_voos[chave] = info_voo 
                 count += 1
             sleep(2)
-            return self.dicionario_voos  
+            if self.dicionario_voos != {}:
+                return self.dicionario_voos
+            else:
+                return 'Nada encontrado'
+                
         except:
-            print('Erro ao carregar a página, tentando novamente...')
+            print('Data incorreta, tente uma válida.')
             navegador.quit()
        
