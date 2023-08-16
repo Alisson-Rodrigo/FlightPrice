@@ -110,21 +110,20 @@ class FlightPrice:
                     'preço': preço,
                     'companhia': companhia,
                     'paradas': paradas,
-                    'horario_partida': horario_partida,
-                    'horario_chegada': horario_chegada
+                    'horario_partida': horario_partida.replace('\u202f', '') + '',
+                    'horario_chegada': horario_chegada.replace('\u202f', '') + ''
                 }
                 chave = f'voo{count + 1}'  
                 self.dicionario_voos[chave] = info_voo 
                 count += 1
             for c,k in self.dicionario_voos.items():
                 print(c,k)
-            return self.dicionario_voos
-                    
+            return self.dicionario_voos  
         except:
             print('Erro ao carregar a página, tentando novamente...')
             navegador.quit()
+       
 
 if __name__ == "__main__":
     scraper = FlightPrice('Rio de janeiro','São paulo','01/01/2024','01/01/2024')
     var = scraper.buscar_voos()
-    print(var)
