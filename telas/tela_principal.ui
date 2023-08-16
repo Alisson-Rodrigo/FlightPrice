@@ -94,32 +94,6 @@ background-repeat: no-repeat;</string>
      <enum>QFrame::Raised</enum>
     </property>
    </widget>
-   <widget class="QScrollArea" name="scrollArea">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>140</y>
-      <width>701</width>
-      <height>491</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border: 1px solid white;</string>
-    </property>
-    <property name="widgetResizable">
-     <bool>true</bool>
-    </property>
-    <widget class="QWidget" name="scrollAreaWidgetContents">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>699</width>
-       <height>489</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
@@ -155,7 +129,6 @@ color: black;}</string>
    <zorder>label</zorder>
    <zorder>frame_2</zorder>
    <zorder>frame</zorder>
-   <zorder>scrollArea</zorder>
    <zorder>pushButton_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
