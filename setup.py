@@ -6,14 +6,14 @@ authors = [
 ]
 
 setup(
-    name='FlightPrice',
+    name='testevoo',
     version='0.0.1',
-    packages=find_packages(exclude=['']),
+    packages=find_packages(),
     license='MIT',
     description='Pacote para obter o menor preço de passagens aéreas',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    install_requires=['selenium'],
+    install_requires=['selenium','Chorme'],
     authors=authors,
     keywords=['flight', 'price', 'web scraping'],
 )

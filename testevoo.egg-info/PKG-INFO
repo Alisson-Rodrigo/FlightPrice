@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: testevoo
+Version: 0.0.1
+Summary: Pacote para obter o menor preço de passagens aéreas
+License: MIT
+Keywords: flight,price,web scraping
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FlightPrice Package
+O pacote Flight Price Ã© uma ferramenta que permite buscar os melhores preÃ§os de voos por meio de web scraping em diferentes sites de companhias aÃ©reas e agÃªncias de viagens. Com este pacote, vocÃª pode automatizar a busca por preÃ§os competitivos para suas viagens.
+
+InstalaÃ§Ã£o
+Para instalar o pacote Flight Price, vocÃª pode usar o pip. Abra um terminal e execute o seguinte comando: pip install flight-price
+
+Uso
+import FlightPrice as flp
+
+#utilizando a biblioteca.
+scraper = FlightScraper('SÃ£o paulo','Rio de janeiro','17/01/2024','17/02/2024')
+voos = scraper.buscar_voos()
+
+#Exibindo informaÃ§Ãµes dos voos.
+for c,k in var.items():
+    print(var[c])
+
+
+ContribuiÃ§Ã£o
+ContribuiÃ§Ãµes sÃ£o bem-vindas! Se vocÃª quiser melhorar o pacote Flight Price, sinta-se Ã  vontade para abrir uma pull request no repositÃ³rio do GitHub.
+
+
+Aviso Legal
+O pacote Flight Price foi desenvolvido apenas para fins educacionais e de demonstraÃ§Ã£o. O web scraping pode violar os termos de serviÃ§o de alguns sites. Certifique-se de estar em conformidade com as polÃ­ticas de uso dos sites que vocÃª deseja fazer scraping.
+
+LicenÃ§a
+Este projeto Ã© licenciado sob a LicenÃ§a MIT - consulte o arquivo LICENSE para obter mais detalhes.
