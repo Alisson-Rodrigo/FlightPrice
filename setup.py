@@ -7,7 +7,7 @@ authors = [
 
 setup(
     name='FlightPrice',
-    version='0.0.1',
+    version='2.3',
     packages=find_packages(exclude=['']),
     license='MIT',
     description='Pacote para obter o menor preço de passagens aéreas',
