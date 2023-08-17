@@ -56,10 +56,13 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
             self.dados = pacote.buscar_voos()
             self.mostrar_tela_principal()
     
+    def exibindo_info(self):
+        self.tela_principal.label_6.setText(self.dados['voo1']['companhia'])
+
+
     def mostrar_tela_principal(self):
         self.QtStack.setCurrentIndex(1)
                
-
     def fechar_programa(self):
         sys.exit(app.exec_())
         
