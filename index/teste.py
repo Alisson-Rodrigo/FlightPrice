@@ -44,12 +44,10 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
         self.tela_inicial.pushButton.clicked.connect(self.buscar_viagens)
         
     def buscar_viagens (self):
-        print ("teste")
         origem = self.tela_inicial.lineEdit_4.text()
         destino = self.tela_inicial.lineEdit_5.text()
         data_ida = self.tela_inicial.lineEdit_7.text()
         data_volta = self.tela_inicial.lineEdit_8.text()
-        print (origem, destino, data_ida, data_volta)
         if origem == "" or destino == "" or data_ida == "" or data_volta == "":
             QMessageBox.about(self, "Erro", "Preencha todos os campos")
         else:
