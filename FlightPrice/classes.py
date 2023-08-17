@@ -82,6 +82,7 @@ class Buscador_voos:
 
             actions = ActionChains(navegador)
             navegador.get("https://www.google.com/travel/flights?sca_esv=555979541&output=search&q=passagens+aereas&source=lnms&mode_promoted=true&impression_in_search=true&sa=X&sqi=2&ved=2ahUKEwjtxKnJm9WAAxXfLrkGHXdLBN4Q0pQJegQICRAB")
+            sleep(2)
 
             origem = navegador.find_element('xpath','//*[@id="i21"]/div[1]/div/div/div[1]/div/div/input')
             actions.click(origem)
@@ -160,6 +161,5 @@ class Buscador_voos:
             return self.dicionario_voos  
         except:
             print('Erro ao carregar a página, tentando novamente...')
-            navegador.quit()
        
 
