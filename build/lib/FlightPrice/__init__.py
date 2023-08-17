@@ -1,1 +1,3 @@
-from .classes import *
+from .classes import Buscador_voos
+
+
