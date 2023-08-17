@@ -51,9 +51,9 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
         if origem == "" or destino == "" or data_ida == "" or data_volta == "":
             QMessageBox.about(self, "Erro", "Preencha todos os campos")
         else:
-            pacote = FlightPrice.FlightPrice(origem, destino, data_ida, data_volta)
+            pacote = FlightPrice.Buscador_voos(origem, destino, data_ida, data_volta)
             QMessageBox.about(self, "Um momento", "Aguarde enquanto buscamos os voos")
-            self.dados = pacote.buscar_voos()
+            self.dados = pacote.melhores_precos()
             self.mostrar_tela_principal()
     
     def exibindo_info(self):
