@@ -42,6 +42,8 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
 
         self.tela_inicial.pushButton_2.clicked.connect(self.fechar_programa)
         self.tela_inicial.pushButton.clicked.connect(self.buscar_viagens)
+
+        self.tela_principal.pushButton_3.clicked.connect(self.fechar_programa)
         
     def buscar_viagens (self):
         origem = self.tela_inicial.lineEdit_4.text()
@@ -57,12 +59,13 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
             self.mostrar_tela_principal()
     
     def exibindo_info(self):
-        self.tela_principal.label_6.setText(self.dados['voo1']['companhia'])
-
+        self.tela_principal.label_6.setText('ola')
 
     def mostrar_tela_principal(self):
+        self.exibindo_info()
+        print ('oi')
         self.QtStack.setCurrentIndex(1)
-               
+        
     def fechar_programa(self):
         sys.exit(app.exec_())
         

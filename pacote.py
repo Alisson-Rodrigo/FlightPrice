@@ -1,7 +1,7 @@
 import FlightPrice
 
-pacote = FlightPrice.FlightPrice("Rio de janeiro", "São paulo", "17/11/2023", "17/12/2023")
-var = pacote.buscar_voos()
+pacote = FlightPrice.Buscador_voos("Rio de janeiro", "São paulo", "17/01/2024", "17/02/2024")
+var = pacote.melhores_precos()
 
 
 print (var)
