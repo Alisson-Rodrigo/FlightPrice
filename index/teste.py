@@ -8,6 +8,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon, QPixmap, QPalette, QColor
 from PyQt5.QtPrintSupport import *
+from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow
+
 import sys
 import FlightPrice
 
@@ -58,13 +60,11 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
             self.dados = pacote.melhores_precos()
             self.mostrar_tela_principal()
     
-    def exibindo_info(self):
-        self.tela_principal.label_6.setText('ola')
 
     def mostrar_tela_principal(self):
-        self.exibindo_info()
-        print ('oi')
+        print (self.dados['voo1']['preço'])
         self.QtStack.setCurrentIndex(1)
+        self.tela_principal.label_6.setText(self.dados['voo1']['preço'])
         
     def fechar_programa(self):
         sys.exit(app.exec_())
