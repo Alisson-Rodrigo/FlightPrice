@@ -62,9 +62,8 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
     
 
     def mostrar_tela_principal(self):
-        print (self.dados['voo1']['preço'])
         self.QtStack.setCurrentIndex(1)
-        self.tela_principal.label_6.setText(self.dados['voo1']['preço'])
+        self.tela_principal.lineEdit.setText(self.dados['voo1']['preço'])
         
     def fechar_programa(self):
         sys.exit(app.exec_())
