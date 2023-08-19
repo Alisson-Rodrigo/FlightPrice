@@ -78,7 +78,7 @@ class Buscador_voos:
             chrome_options.add_argument('--window-size=1920x1080')
 
 
-            navegador = webdriver.Chrome(options=chrome_options)
+            navegador = webdriver.Chrome()
 
             actions = ActionChains(navegador)
             navegador.get("https://www.google.com/travel/flights?sca_esv=555979541&output=search&q=passagens+aereas&source=lnms&mode_promoted=true&impression_in_search=true&sa=X&sqi=2&ved=2ahUKEwjtxKnJm9WAAxXfLrkGHXdLBN4Q0pQJegQICRAB")
@@ -157,9 +157,16 @@ class Buscador_voos:
                 chave = f'voo{count + 1}'  
                 self.dicionario_voos[chave] = info_voo 
                 count += 1
+            for c in self.dicionario_voos:
+                print(self.dicionario_voos[c])
             sleep(2)
             return self.dicionario_voos  
         except:
             print('Erro ao carregar a página, tentando novamente...')
+
+if __name__ == '__main__':
+    var = Buscador_voos('São Paulo','Rio de Janeiro','10/10/2023','20/10/2023')
+    var2 = var.melhores_precos()
+    print(var2)
        
 
