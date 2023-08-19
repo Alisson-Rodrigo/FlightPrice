@@ -58,13 +58,69 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
             pacote = FlightPrice.Buscador_voos(origem, destino, data_ida, data_volta)
             QMessageBox.about(self, "Um momento", "Aguarde enquanto buscamos os voos")
             self.dados = pacote.melhores_precos()
+            print (self.dados)
             self.mostrar_tela_principal()
     
 
     def mostrar_tela_principal(self):
         self.QtStack.setCurrentIndex(1)
-        self.tela_principal.lineEdit.setText(self.dados['voo1']['preço'])
+        if self.dados['voo1'] in self.dados:
+            self.tela_principal.lineEdit.setText(self.dados['voo1']['companhia'])
+            self.tela_principal.lineEdit_2.setText(self.dados['voo1']['preço'])
+            self.tela_principal.lineEdit_3.setText(self.dados['voo1']['horario_partida'])
+            self.tela_principal.lineEdit_4.setText(self.dados['voo1']['horario_chegada'])
+        else:
+            self.tela_principal.lineEdit.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_2.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_3.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_4.setText("Não há voos disponíveis")
+
+        if self.dados['voo2'] in self.dados:
+            self.tela_principal.lineEdit_5.setText(self.dados['voo2']['companhia'])
+            self.tela_principal.lineEdit_6.setText(self.dados['voo2']['preço'])
+            self.tela_principal.lineEdit_7.setText(self.dados['voo2']['horario_partida'])
+            self.tela_principal.lineEdit_8.setText(self.dados['voo2']['horario_chegada'])
+        else:
+            self.tela_principal.lineEdit_5.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_6.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_7.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_8.setText("Não há voos disponíveis")
         
+
+        if self.dados['voo3' in self.dados]:
+            self.tela_principal.lineEdit_9.setText(self.dados['voo3']['companhia'])
+            self.tela_principal.lineEdit_10.setText(self.dados['voo3']['preço'])
+            self.tela_principal.lineEdit_11.setText(self.dados['voo3']['horario_partida'])
+            self.tela_principal.lineEdit_12.setText(self.dados['voo3']['horario_chegada'])
+        else:
+            self.tela_principal.lineEdit_9.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_10.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_11.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_12.setText("Não há voos disponíveis")
+
+        if self.dados['voo4'] in self.dados:
+            self.tela_principal.lineEdit_13.setText(self.dados['voo4']['companhia'])
+            self.tela_principal.lineEdit_14.setText(self.dados['voo4']['preço'])
+            self.tela_principal.lineEdit_15.setText(self.dados['voo4']['horario_partida'])
+            self.tela_principal.lineEdit_16.setText(self.dados['voo4']['horario_chegada'])
+        else:
+            self.tela_principal.lineEdit_13.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_14.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_15.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_16.setText("Não há voos disponíveis")
+
+        if self.dados['voo5'] in self.dados:
+            self.tela_principal.lineEdit_17.setText(self.dados['voo5']['companhia'])
+            self.tela_principal.lineEdit_18.setText(self.dados['voo5']['preço'])
+            self.tela_principal.lineEdit_19.setText(self.dados['voo5']['horario_partida'])
+            self.tela_principal.lineEdit_20.setText(self.dados['voo5']['horario_chegada'])
+        else:
+            self.tela_principal.lineEdit_17.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_18.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_19.setText("Não há voos disponíveis")
+            self.tela_principal.lineEdit_20.setText("Não há voos disponíveis")
+        
+     
     def fechar_programa(self):
         sys.exit(app.exec_())
         

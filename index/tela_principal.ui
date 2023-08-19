@@ -228,6 +228,12 @@ color: white;</string>
        <height>16</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_2">
      <property name="enabled">
@@ -240,6 +246,12 @@ color: white;</string>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_3">
@@ -254,6 +266,12 @@ color: white;</string>
        <height>16</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_4">
      <property name="enabled">
@@ -263,9 +281,15 @@ color: white;</string>
       <rect>
        <x>120</x>
        <y>110</y>
-       <width>111</width>
+       <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
@@ -371,6 +395,12 @@ color: white;</string>
        <height>16</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_6">
      <property name="enabled">
@@ -383,6 +413,12 @@ color: white;</string>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_7">
@@ -397,6 +433,12 @@ color: white;</string>
        <height>16</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_8">
      <property name="enabled">
@@ -406,9 +448,15 @@ color: white;</string>
       <rect>
        <x>120</x>
        <y>110</y>
-       <width>111</width>
+       <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
@@ -508,11 +556,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>20</y>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_10">
@@ -521,11 +575,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>50</y>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_11">
@@ -534,11 +594,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>80</y>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_12">
@@ -547,11 +613,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>110</y>
-       <width>111</width>
+       <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
@@ -651,11 +723,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>20</y>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_14">
@@ -664,11 +742,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>50</y>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_15">
@@ -677,11 +761,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>80</y>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_16">
@@ -690,11 +780,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>110</y>
-       <width>111</width>
+       <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
@@ -794,11 +890,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>20</y>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_18">
@@ -807,11 +909,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>50</y>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_19">
@@ -820,11 +928,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>80</y>
        <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_20">
@@ -833,11 +947,17 @@ color: white;</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>110</y>
-       <width>111</width>
+       <width>113</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
