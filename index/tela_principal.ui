@@ -184,8 +184,8 @@ color: white;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
-       <width>111</width>
+       <y>110</y>
+       <width>91</width>
        <height>17</height>
       </rect>
      </property>
@@ -216,56 +216,56 @@ color: white;</string>
       <string>Embarque:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_6">
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>120</x>
        <y>20</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>120</x>
        <y>50</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_8">
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>120</x>
        <y>80</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_9">
+    <widget class="QLineEdit" name="lineEdit_4">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>120</y>
-       <width>101</width>
-       <height>17</height>
+       <x>120</x>
+       <y>110</y>
+       <width>111</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
    </widget>
@@ -327,8 +327,8 @@ color: white;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
-       <width>111</width>
+       <y>110</y>
+       <width>91</width>
        <height>17</height>
       </rect>
      </property>
@@ -359,56 +359,56 @@ color: white;</string>
       <string>Embarque:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_14">
+    <widget class="QLineEdit" name="lineEdit_5">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>120</x>
        <y>20</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_15">
+    <widget class="QLineEdit" name="lineEdit_6">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>120</x>
        <y>50</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_16">
+    <widget class="QLineEdit" name="lineEdit_7">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>120</x>
        <y>80</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_17">
+    <widget class="QLineEdit" name="lineEdit_8">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>120</y>
-       <width>101</width>
-       <height>17</height>
+       <x>120</x>
+       <y>110</y>
+       <width>111</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
    </widget>
@@ -470,8 +470,8 @@ color: white;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
-       <width>111</width>
+       <y>110</y>
+       <width>91</width>
        <height>17</height>
       </rect>
      </property>
@@ -502,56 +502,56 @@ color: white;</string>
       <string>Embarque:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_22">
+    <widget class="QLineEdit" name="lineEdit_9">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>110</x>
        <y>20</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_23">
+    <widget class="QLineEdit" name="lineEdit_10">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>110</x>
        <y>50</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_24">
+    <widget class="QLineEdit" name="lineEdit_11">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>110</x>
        <y>80</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_25">
+    <widget class="QLineEdit" name="lineEdit_12">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>120</y>
-       <width>101</width>
-       <height>17</height>
+       <x>110</x>
+       <y>110</y>
+       <width>111</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
    </widget>
@@ -613,8 +613,8 @@ color: white;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
-       <width>111</width>
+       <y>110</y>
+       <width>91</width>
        <height>17</height>
       </rect>
      </property>
@@ -645,56 +645,56 @@ color: white;</string>
       <string>Embarque:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_30">
+    <widget class="QLineEdit" name="lineEdit_13">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>110</x>
        <y>20</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_31">
+    <widget class="QLineEdit" name="lineEdit_14">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>110</x>
        <y>50</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_32">
+    <widget class="QLineEdit" name="lineEdit_15">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>110</x>
        <y>80</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_33">
+    <widget class="QLineEdit" name="lineEdit_16">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>120</y>
-       <width>101</width>
-       <height>17</height>
+       <x>110</x>
+       <y>110</y>
+       <width>111</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
    </widget>
@@ -756,8 +756,8 @@ color: white;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
-       <width>111</width>
+       <y>110</y>
+       <width>91</width>
        <height>17</height>
       </rect>
      </property>
@@ -788,56 +788,56 @@ color: white;</string>
       <string>Embarque:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_38">
+    <widget class="QLineEdit" name="lineEdit_17">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>110</x>
        <y>20</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_39">
+    <widget class="QLineEdit" name="lineEdit_18">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>110</x>
        <y>50</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
     </widget>
-    <widget class="QLabel" name="label_40">
+    <widget class="QLineEdit" name="lineEdit_19">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>110</x>
        <y>80</y>
-       <width>101</width>
-       <height>17</height>
+       <width>113</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_41">
+    <widget class="QLineEdit" name="lineEdit_20">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>120</y>
-       <width>101</width>
-       <height>17</height>
+       <x>110</x>
+       <y>110</y>
+       <width>111</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
      </property>
     </widget>
    </widget>
@@ -857,13 +857,13 @@ color: white;</string>
      <x>0</x>
      <y>0</y>
      <width>1197</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
  </widget>
  <resources>
-  <include location="../GitHub/cast/poo-II/telas/imagens.qrc"/>
+  <include location="../../pooII/poo-II/telas/imagens.qrc"/>
  </resources>
  <connections/>
 </ui>
