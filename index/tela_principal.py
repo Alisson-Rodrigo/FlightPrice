@@ -46,20 +46,14 @@ class Tela_Principal(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(10, 620, 71, 25))
+        self.pushButton_3.setGeometry(QtCore.QRect(1160, 0, 91, 31))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_3.setFont(font)
         self.pushButton_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pushButton_3.setStyleSheet("QPushButton {\n"
-"background-color: rgb(198, 70, 0);\n"
-"color: black;\n"
-"border-radius: 10px;}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: white;\n"
-"color: black;}")
+        self.pushButton_3.setStyleSheet("background-image: url(log-out.svg);\n"
+"background-repeat: no-repeat;")
         self.pushButton_3.setObjectName("pushButton_3")
         self.frame_3 = QtWidgets.QFrame(self.centralwidget)
         self.frame_3.setGeometry(QtCore.QRect(520, 110, 241, 161))
@@ -166,7 +160,8 @@ class Tela_Principal(object):
         self.lineEdit_8 = QtWidgets.QLineEdit(self.frame_4)
         self.lineEdit_8.setEnabled(False)
         self.lineEdit_8.setGeometry(QtCore.QRect(120, 110, 113, 16))
-        self.lineEdit_8.setStyleSheet("color: white;")
+        self.lineEdit_8.setStyleSheet("color: white;\n"
+"")
         self.lineEdit_8.setText("")
         self.lineEdit_8.setObjectName("lineEdit_8")
         self.frame_5 = QtWidgets.QFrame(self.centralwidget)
@@ -331,6 +326,13 @@ class Tela_Principal(object):
         self.lineEdit_20.setStyleSheet("color: white;")
         self.lineEdit_20.setText("")
         self.lineEdit_20.setObjectName("lineEdit_20")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(1160, 40, 31, 31))
+        self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton.setStyleSheet("background-image: url(corner-down-left(1).svg);\n"
+"background-repeat:no-repeat;")
+        self.pushButton.setText("")
+        self.pushButton.setObjectName("pushButton")
         self.label.raise_()
         self.frame_2.raise_()
         self.frame.raise_()
@@ -340,9 +342,10 @@ class Tela_Principal(object):
         self.frame_5.raise_()
         self.frame_6.raise_()
         self.frame_7.raise_()
+        self.pushButton.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1197, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1197, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
 
@@ -374,3 +377,13 @@ class Tela_Principal(object):
         self.label_35.setText(_translate("MainWindow", "Preço:"))
         self.label_36.setText(_translate("MainWindow", "Desembarque:"))
         self.label_37.setText(_translate("MainWindow", "Embarque:"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Tela_Principal()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

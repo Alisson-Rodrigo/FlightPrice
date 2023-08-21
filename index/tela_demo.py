@@ -46,6 +46,7 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
         self.tela_inicial.pushButton.clicked.connect(self.buscar_viagens)
 
         self.tela_principal.pushButton_3.clicked.connect(self.fechar_programa)
+        self.tela_principal.pushButton.clicked.connect(self.voltar_tela)
         
     def buscar_viagens (self):
         origem = self.tela_inicial.lineEdit_4.text()
@@ -59,7 +60,13 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
             QMessageBox.about(self, "Um momento", "Aguarde enquanto buscamos os voos")
             self.dados = pacote.buscar_voos()
             self.mostrar_tela_principal()
-    
+            self.tela_inicial.lineEdit_4.clear()
+            self.tela_inicial.lineEdit_5.clear()
+            self.tela_inicial.lineEdit_7.clear()
+            self.tela_inicial.lineEdit_8.clear()
+
+    def voltar_tela(self):
+        self.QtStack.setCurrentIndex(0)
 
     def mostrar_tela_principal(self):
         self.QtStack.setCurrentIndex(1)
