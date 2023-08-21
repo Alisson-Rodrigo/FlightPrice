@@ -55,16 +55,16 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
         if origem == "" or destino == "" or data_ida == "" or data_volta == "":
             QMessageBox.about(self, "Erro", "Preencha todos os campos")
         else:
-            pacote = FlightPrice.Buscador_voos(origem, destino, data_ida, data_volta)
+            pacote = FlightPrice.Melhores_voos(origem, destino, data_ida, data_volta)
             QMessageBox.about(self, "Um momento", "Aguarde enquanto buscamos os voos")
-            self.dados = pacote.melhores_precos()
+            self.dados = pacote.buscar_voos()
             self.mostrar_tela_principal()
     
 
     def mostrar_tela_principal(self):
         self.QtStack.setCurrentIndex(1)
         
-        if self.dados != None:
+        if self.dados != 'Não ha voos disponiveis para esta localidade.':
             if 'voo1' in self.dados:
                 self.tela_principal.lineEdit.setText(self.dados['voo1']['companhia'])
                 self.tela_principal.lineEdit_2.setText(self.dados['voo1']['preço'])
