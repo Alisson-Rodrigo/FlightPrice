@@ -117,7 +117,10 @@ class FlightPrice:
                 self.dicionario_voos[chave] = info_voo 
                 count += 1
             sleep(2)
-            return self.dicionario_voos  
+            if self.dicionario_voos != {}:
+                return self.dicionario_voos
+            else:
+                return 'Não há voos disponiveis para esta localidade.' 
         except:
             print('Erro ao carregar a página, tentando novamente...')
             navegador.quit()
