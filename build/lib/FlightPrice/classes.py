@@ -7,9 +7,14 @@ from selenium.webdriver.chrome.options import Options
 
 from time import sleep
 
-class Buscador_voos:
+class Melhores_voos:
     """
-    Classe para obter o menor preço de passagens aéreas atraves da biblioteca selenium, utilizando o navegador Google Chrome,para fazer a raspagem de dados do site Google Flights.
+        Classe que busca os melhores voos para o usuário utilizando a blioteca selenium, para fazer a busca no google flights.Para obter os melhores voos, é necessário informar a origem, o destino, a data de ida e a data de volta.
+
+    Methods
+    -------
+    buscar_voos()
+        Busca os melhores voos para o usuário.
 
     Parameters
     ----------
@@ -22,20 +27,15 @@ class Buscador_voos:
     volta : str
         Data de volta da viagem.
 
-    Methods
-    -------
-    melhores_precos()
-        Retorna um dicionário com os 5 melhores preços de passagens aéreas, com as seguintes informações: preço, companhia, paradas, horario de partida e horario de chegada.
-
     Returns
     -------
     dict
-        Dicionário com os 5 melhores preços de passagens aéreas, com as seguintes informações: preço, companhia, paradas, horario de partida e horario de chegada.
+        Dicionário com os melhores voos para o usuário.
 
-    
+
+
     """
-    
-    
+        
     def __init__(self,origem,destino,ida,volta):
         self.origem_campo = origem
         self.destino_campo = destino
@@ -55,23 +55,20 @@ class Buscador_voos:
         self.lista_horarios_chegada = ['//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[2]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[3]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[4]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span','//*[@id="yDmH0d"]/c-wiz[2]/div/div[2]/c-wiz/div[1]/c-wiz/div[2]/div[2]/div[3]/ul/li[5]/div/div[2]/div/div[2]/div[2]/div[1]/span/span[2]/span/span/span']
               
 
-    def melhores_precos(self):
+    def buscar_voos(self):
         """
-        Retorna um dicionário com os 5 melhores preços de passagens aéreas, com as seguintes informações: preço, companhia, paradas, horario de partida e horario de chegada.
+            Método que busca os melhores voos para o usuário.
 
-        Parameters
-        ---------- 
-        none
+            Parameters
+            ----------
+            None
 
-        Returns
-        -------
-        dict
-            Dicionário com os 5 melhores preços de passagens aéreas, com as seguintes informações: preço, companhia, paradas, horario de partida e horario de chegada.
-
+            Returns
+            -------
+            dict
+                Dicionário com os melhores voos para o usuário.
         """
         try:
-
-
             chrome_options = Options()
             chrome_options.add_argument('--headless')  
             chrome_options.add_argument('--disable-gpu')  
@@ -157,9 +154,11 @@ class Buscador_voos:
                 self.dicionario_voos[chave] = info_voo 
                 count += 1
             sleep(2)
-            return self.dicionario_voos  
+            if self.dicionario_voos != {}:
+                return self.dicionario_voos
+            else:
+                return 'Não há voos disponiveis para esta localidade.' 
         except:
             print('Erro ao carregar a página, tentando novamente...')
             navegador.quit()
        
-

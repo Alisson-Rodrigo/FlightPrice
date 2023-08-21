@@ -7,7 +7,34 @@ from selenium.webdriver.chrome.options import Options
 
 from time import sleep
 
-class FlightPrice:
+class Melhores_voos:
+    """
+        Classe que busca os melhores voos para o usuário utilizando a blioteca selenium, para fazer a busca no google flights.Para obter os melhores voos, é necessário informar a origem, o destino, a data de ida e a data de volta.
+
+    Methods
+    -------
+    buscar_voos()
+        Busca os melhores voos para o usuário.
+
+    Parameters
+    ----------
+    origem : str
+        Local de origem da viagem.
+    destino : str
+        Local de destino da viagem.
+    ida : str
+        Data de ida da viagem.
+    volta : str
+        Data de volta da viagem.
+
+    Returns
+    -------
+    dict
+        Dicionário com os melhores voos para o usuário.
+
+
+
+    """
         
     def __init__(self,origem,destino,ida,volta):
         self.origem_campo = origem
@@ -29,9 +56,19 @@ class FlightPrice:
               
 
     def buscar_voos(self):
+        """
+            Método que busca os melhores voos para o usuário.
+
+            Parameters
+            ----------
+            None
+
+            Returns
+            -------
+            dict
+                Dicionário com os melhores voos para o usuário.
+        """
         try:
-
-
             chrome_options = Options()
             chrome_options.add_argument('--headless')  
             chrome_options.add_argument('--disable-gpu')  
@@ -117,9 +154,11 @@ class FlightPrice:
                 self.dicionario_voos[chave] = info_voo 
                 count += 1
             sleep(2)
-            return self.dicionario_voos  
+            if self.dicionario_voos != {}:
+                return self.dicionario_voos
+            else:
+                return 'Não há voos disponiveis para esta localidade.' 
         except:
             print('Erro ao carregar a página, tentando novamente...')
             navegador.quit()
        
-
