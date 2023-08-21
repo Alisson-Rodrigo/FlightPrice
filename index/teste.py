@@ -63,29 +63,30 @@ class Main(QtWidgets.QMainWindow, Ui_Main):
 
     def mostrar_tela_principal(self):
         self.QtStack.setCurrentIndex(1)
-        if 'voo1' in self.dados:
-            self.tela_principal.lineEdit.setText(self.dados['voo1']['companhia'])
-            self.tela_principal.lineEdit_2.setText(self.dados['voo1']['preço'])
-            self.tela_principal.lineEdit_3.setText(self.dados['voo1']['horario_partida'])
-            self.tela_principal.lineEdit_4.setText(self.dados['voo1']['horario_chegada'])
-        else:
-            self.tela_principal.lineEdit.setText("Não há voos")
-            self.tela_principal.lineEdit_2.setText("Não há voos")
-            self.tela_principal.lineEdit_3.setText("Não há voos")
-            self.tela_principal.lineEdit_4.setText("Não há voos")
-
-        if 'voo2' in self.dados:
-            self.tela_principal.lineEdit_5.setText(self.dados['voo2']['companhia'])
-            self.tela_principal.lineEdit_6.setText(self.dados['voo2']['preço'])
-            self.tela_principal.lineEdit_7.setText(self.dados['voo2']['horario_partida'])
-            self.tela_principal.lineEdit_8.setText(self.dados['voo2']['horario_chegada'])
-        else:
-            self.tela_principal.lineEdit_5.setText("Não há voos")
-            self.tela_principal.lineEdit_6.setText("Não há voos")
-            self.tela_principal.lineEdit_7.setText("Não há voos")
-            self.tela_principal.lineEdit_8.setText("Não há voos")
         
         if self.dados != None:
+            if 'voo1' in self.dados:
+                self.tela_principal.lineEdit.setText(self.dados['voo1']['companhia'])
+                self.tela_principal.lineEdit_2.setText(self.dados['voo1']['preço'])
+                self.tela_principal.lineEdit_3.setText(self.dados['voo1']['horario_partida'])
+                self.tela_principal.lineEdit_4.setText(self.dados['voo1']['horario_chegada'])
+            else:
+                self.tela_principal.lineEdit.setText("Não há voos")
+                self.tela_principal.lineEdit_2.setText("Não há voos")
+                self.tela_principal.lineEdit_3.setText("Não há voos")
+                self.tela_principal.lineEdit_4.setText("Não há voos")
+
+            if 'voo2' in self.dados:
+                self.tela_principal.lineEdit_5.setText(self.dados['voo2']['companhia'])
+                self.tela_principal.lineEdit_6.setText(self.dados['voo2']['preço'])
+                self.tela_principal.lineEdit_7.setText(self.dados['voo2']['horario_partida'])
+                self.tela_principal.lineEdit_8.setText(self.dados['voo2']['horario_chegada'])
+            else:
+                self.tela_principal.lineEdit_5.setText("Não há voos")
+                self.tela_principal.lineEdit_6.setText("Não há voos")
+                self.tela_principal.lineEdit_7.setText("Não há voos")
+                self.tela_principal.lineEdit_8.setText("Não há voos")
+        
             if 'voo3' in self.dados:
                 self.tela_principal.lineEdit_9.setText(self.dados['voo3']['companhia'])
                 self.tela_principal.lineEdit_10.setText(self.dados['voo3']['preço'])
