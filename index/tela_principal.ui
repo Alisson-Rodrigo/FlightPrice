@@ -97,10 +97,10 @@ background-repeat: no-repeat;</string>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>620</y>
-      <width>71</width>
-      <height>25</height>
+      <x>1160</x>
+      <y>0</y>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -113,14 +113,8 @@ background-repeat: no-repeat;</string>
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton {
-background-color: rgb(198, 70, 0);
-color: black;
-border-radius: 10px;}
-
-QPushButton:hover {
-background-color: white;
-color: black;}</string>
+     <string notr="true">background-image: url(:/newPrefix/log-out.svg);
+background-repeat: no-repeat;</string>
     </property>
     <property name="text">
      <string>Sair</string>
@@ -453,7 +447,8 @@ color: white;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: white;</string>
+      <string notr="true">color: white;
+</string>
      </property>
      <property name="text">
       <string/>
@@ -961,6 +956,26 @@ color: white;</string>
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>40</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/newPrefix/corner-down-left(1).svg);
+background-repeat:no-repeat;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>frame_2</zorder>
    <zorder>frame</zorder>
@@ -970,6 +985,7 @@ color: white;</string>
    <zorder>frame_5</zorder>
    <zorder>frame_6</zorder>
    <zorder>frame_7</zorder>
+   <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -977,13 +993,13 @@ color: white;</string>
      <x>0</x>
      <y>0</y>
      <width>1197</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
  </widget>
  <resources>
-  <include location="../../pooII/poo-II/telas/imagens.qrc"/>
+  <include location="../../cast/poo-II/telas/imagens.qrc"/>
  </resources>
  <connections/>
 </ui>
